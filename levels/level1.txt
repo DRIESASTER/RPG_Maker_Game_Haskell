@@ -1,0 +1,19 @@
+player: {
+    hp: 50,
+    inventory: []
+}
+
+levels: [
+    {
+        layout: {
+            | * * * * * *
+            | * s . . e *
+            | * * * * * *
+        },
+        
+        items: [],
+
+        entities: []
+    }
+]
+

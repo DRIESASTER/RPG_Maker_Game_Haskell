@@ -1,0 +1,25 @@
+name:           rpg-engine
+version:        1.0.0
+author:         Author name here
+cabal-version:  1.12
+build-type:     Simple
+
+library
+  hs-source-dirs: lib
+  build-depends: base >= 4.7 && <5, parsec >=3.1.15.1, gloss >= 1.11 && < 1.14, gloss-juicy >=0.2.3, directory >= 1.3.6.2
+  exposed-modules: Parser, DataStructures, Game_maker, Renderer, Game_Logic, ExtraScreens, Global_vars, GameManager, ImageManager
+
+
+executable rpg-engine
+  main-is: Main.hs
+  hs-source-dirs: src
+  default-language: Haskell2010
+  build-depends: base >= 4.7 && <5, rpg-engine,gloss >= 1.11 && < 1.14,gloss-juicy >=0.2.3, random >= 1.1 && < 1.4, random-shuffle >= 0.0.4, parsec >=3.1.15.1
+
+test-suite rpg-engine-test
+  type: exitcode-stdio-1.0
+  main-is: GameTests.hs
+  hs-source-dirs: test
+  default-language: Haskell2010
+  build-depends: base >=4.7 && <5, hspec <= 2.10.6, rpg-engine
+
